@@ -1,0 +1,104 @@
+{
+  "loo_theme_accuracy_all": 0.552,
+  "loo_theme_accuracy_non_singleton": 0.571,
+  "n_non_singleton": 28,
+  "loo_theme_accuracy_family": 0.714,
+  "lead_triage_mean_nn_similarity": 0.36,
+  "extract_seconds_per_repo": 0.024,
+  "confusions": [
+    {
+      "true": "proposal_scoping",
+      "pred": "lead_triage"
+    },
+    {
+      "true": "proposal_scoping",
+      "pred": "lead_triage"
+    },
+    {
+      "true": "tenantease",
+      "pred": "revio_reviews"
+    },
+    {
+      "true": "delivery_ops",
+      "pred": "lead_triage"
+    },
+    {
+      "true": "lead_triage",
+      "pred": "revio_reviews"
+    },
+    {
+      "true": "proposal_scoping",
+      "pred": "lead_triage"
+    },
+    {
+      "true": "lead_triage",
+      "pred": "revio_reviews"
+    },
+    {
+      "true": "learning",
+      "pred": "lead_triage"
+    },
+    {
+      "true": "lead_triage",
+      "pred": "proposal_scoping"
+    },
+    {
+      "true": "lead_triage",
+      "pred": "delivery_ops"
+    },
+    {
+      "true": "other",
+      "pred": "proposal_scoping"
+    },
+    {
+      "true": "other",
+      "pred": "delivery_ops"
+    },
+    {
+      "true": "revio_reviews",
+      "pred": "lead_triage"
+    }
+  ],
+  "pool_stats": {
+    "repos": 29,
+    "ai_ml_repos": 25,
+    "theme_counts": [
+      [
+        "lead_triage",
+        12
+      ],
+      [
+        "revio_reviews",
+        6
+      ],
+      [
+        "proposal_scoping",
+        4
+      ],
+      [
+        "tenantease",
+        2
+      ],
+      [
+        "learning",
+        2
+      ],
+      [
+        "other",
+        2
+      ],
+      [
+        "delivery_ops",
+        1
+      ]
+    ],
+    "pct_with_tests": 72,
+    "pct_with_live_demo": 28,
+    "pct_single_dump": 55,
+    "pct_with_video": 0,
+    "pct_with_placeholders": 14,
+    "pct_mention_eval": 83,
+    "median_commits": 4,
+    "ai_ml_all_deliverables_detected": "23/25"
+  }
+}
