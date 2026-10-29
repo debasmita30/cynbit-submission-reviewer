@@ -13,9 +13,13 @@ GITHUB_RE = re.compile(r"github\.com[/:]([\w.-]+)/([\w.-]+?)(?:\.git)?(?:/.*)?$"
 
 
 def parse_github_url(url: str) -> tuple[str, str]:
-    m = GITHUB_RE.search(url.strip())
+    url = url.strip().rstrip("/")
+    short = re.fullmatch(r"([\w.-]+)/([\w.-]+?)(?:\.git)?", url)  # accept "owner/repo"
+    if short:
+        return short.group(1), short.group(2)
+    m = GITHUB_RE.search(url)
     if not m:
-        raise ValueError("Expected a GitHub repository URL like https://github.com/owner/repo")
+        raise ValueError("Paste a GitHub repo link like https://github.com/owner/repo or just owner/repo")
     return m.group(1), m.group(2)
 
 
