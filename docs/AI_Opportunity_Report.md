@@ -1,6 +1,6 @@
 # AI Opportunity Report: Cynbit Technologies
 
-AI/ML Engineer Intern assessment, October 2026. Author: [Debasmita Chatterjee]
+AI/ML Engineer Intern assessment, October 2026.
 
 ## Summary
 
@@ -48,7 +48,7 @@ Some things a reviewer would want to know before opening each repo:
 
 - 55% arrived mostly in one commit (90% or more of the files in a single commit).
 - 28% include a live demo link, and none include a walkthrough video.
-- 14% still contain placeholders such as `your-username` in clone instructions.
+- 14% still contain unfilled placeholder text, such as a template username left in the clone instructions.
 - 72% have some automated tests.
 - 83% report evaluation numbers, almost always on synthetic data.
 
