@@ -21,7 +21,7 @@ from reviewer.rubric import BRIEFS
 ROOT = Path(__file__).parent
 st.set_page_config(page_title="Submission Review Assistant", page_icon="◎", layout="wide")
 
-# ---------- styling: animated header, cards, score ring, bars (works in light and dark themes) ----------
+
 st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
@@ -93,12 +93,28 @@ def e(x) -> str:
 
 tab_review, tab_pool, tab_how = st.tabs(["Review a repo", "Submission pool", "How it works"])
 
+DEMOS = {
+    "This project": "debasmita30/cynbit-submission-reviewer",
+    "karpathy/micrograd": "karpathy/micrograd",
+    "streamlit/llm-examples": "streamlit/llm-examples",
+    "pallets/click": "pallets/click",
+}
+
 with tab_review:
+    st.markdown("<div class='kpi-l' style='margin-bottom:6px'>Try a demo repo</div>", unsafe_allow_html=True)
+    demo_cols = st.columns(len(DEMOS))
+    for col, (label, slug) in zip(demo_cols, DEMOS.items()):
+        if col.button(label, key=f"demo_{slug}", width="stretch"):
+            st.session_state["url_in"] = slug
+            st.session_state["auto_run"] = True
+
     with st.form("f"):
         c1, c2 = st.columns([3, 1])
-        url = c1.text_input("Public GitHub repo URL", placeholder="https://github.com/owner/repo")
+        url = c1.text_input("Public GitHub repo URL", key="url_in",
+                            placeholder="https://github.com/owner/repo  or  owner/repo")
         role = c2.selectbox("Role brief", list(BRIEFS))
         go = st.form_submit_button("Review repo", type="primary", width="stretch")
+    go = go or st.session_state.pop("auto_run", False)
 
     if go and url.strip():
         try:
@@ -111,7 +127,7 @@ with tab_review:
             try:
                 t = time.perf_counter()
                 st.write("Cloning repository and history…")
-                path = clone(url.strip())
+                path = clone(f"https://github.com/{owner}/{repo}")
                 st.write(f"Cloned in {time.perf_counter() - t:.1f}s. Reading files, docs and commits…")
                 r = review_path(path, role, f"{owner}/{repo}")
                 r["repo"] = f"{owner}/{repo}"
