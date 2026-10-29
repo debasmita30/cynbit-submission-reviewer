@@ -1,6 +1,6 @@
 # AI Opportunity Report: Cynbit Technologies
 
-AI/ML Engineer Intern assessment, October 2026. Author: [Your Name]
+AI/ML Engineer Intern assessment, October 2026. Author: [Debasmita Chatterjee]
 
 ## Summary
 
