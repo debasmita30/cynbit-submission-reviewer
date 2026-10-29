@@ -1,6 +1,6 @@
 # Technical Approach: Submission Review Assistant
 
-Companion to the [AI Opportunity Report](AI_Opportunity_Report.md). Author: [Your Name]
+Companion to the [AI Opportunity Report](AI_Opportunity_Report.md). Author: [Debasmita Chatterjee]
 
 ## Goal and constraints
 
