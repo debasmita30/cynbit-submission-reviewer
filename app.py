@@ -21,7 +21,7 @@ from reviewer.rubric import BRIEFS
 ROOT = Path(__file__).parent
 st.set_page_config(page_title="Submission Review Assistant", page_icon="◎", layout="wide")
 
-
+# ---------- styling: animated header, cards, score ring, bars (works in light and dark themes) ----------
 st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
