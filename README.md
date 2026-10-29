@@ -3,7 +3,7 @@
 
 <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=22&pause=1000&color=7C3AED&center=true&vCenter=true&width=760&lines=Paste+any+public+GitHub+repo+%E2%86%92+get+a+review+card;Deliverables+%C2%B7+Runnability+%C2%B7+Red+Flags+%C2%B7+Idea+Similarity;Evaluated+on+29+real+Cynbit+assessment+submissions;Never+runs+candidate+code+%C2%B7+Never+makes+the+decision" alt="Typing SVG" />
 
-<a href="LIVE_DEMO_URL" target="_blank">
+<a href="https://cynbit-submission-reviewer.streamlit.app/" target="_blank">
   <img src="https://img.shields.io/badge/🚀%20LIVE%20DEMO-Streamlit%20App-7C3AED?style=for-the-badge&logoColor=white" alt="Live Demo"/>
 </a>
 
@@ -31,7 +31,13 @@
 </div>
 
 <div align="center">
-<img src="./assets/app-screenshot.png" alt="Review card for a real submission" width="90%"/>
+
+## 🚀 **[▶ TRY THE LIVE APP → cynbit-submission-reviewer.streamlit.app](https://cynbit-submission-reviewer.streamlit.app/)**
+
+<a href="https://cynbit-submission-reviewer.streamlit.app/" target="_blank"><img src="https://img.shields.io/badge/▶%20OPEN%20LIVE%20APP-cynbit--submission--reviewer.streamlit.app-7C3AED?style=for-the-badge&logo=streamlit&logoColor=white" height="48" alt="Open live app"/></a>
+
+**No login · No API key · Paste any public GitHub repo or click a demo repo**
+
 </div>
 
 ## 📌 Quick Links
@@ -97,7 +103,7 @@ flowchart LR
 | 🌐 | Include a **live demo link** | 28% |
 | 🎥 | Include a **walkthrough video** | 0% |
 | 🧪 | Have **automated tests** | 72% |
-| 📝 | Still contain **placeholders** (`your-username`, `TODO`) | 14% |
+| 📝 | Still contain **unfilled placeholder text** | 14% |
 | 🔍 | Submissions that build a **submission reviewer** | **0** |
 
 *Aggregates only. No individual candidate is scored or named in this repo. Full breakdown in [`reports/pool_insights.md`](reports/pool_insights.md).*
@@ -243,7 +249,7 @@ Almost every submission to this assessment evaluates on **synthetic data**, sinc
 - Committed **API keys**: OpenAI, Anthropic, Google, Groq, GitHub, AWS formats
 - Dummy-value filter (no false alarm on `sk-test-…`)
 - Committed `.env`, `node_modules/`, `venv/`
-- Leftover placeholders: `[Your Name]`, `your-username`, `TODO`
+- Leftover template text: unfilled name fields, template usernames, to-do markers
 - One-commit dumps, phrased as an interview question, not an accusation
 
 </td>
@@ -301,8 +307,7 @@ cynbit-submission-reviewer/
 │
 ├── docs/                       # AI Opportunity Report · Technical Approach
 ├── reports/                    # pool_insights.md · metrics.json
-├── tests/                      # 6 pytest tests (built repos, dummy keys, similarity)
-└── assets/                     # README screenshot
+└── tests/                      # 6 pytest tests (built repos, dummy keys, similarity)
 ```
 
 ## 🚀 Run & Deploy
@@ -370,7 +375,7 @@ pytest -q
 
 **Cynbit Technologies · AI/ML Engineer Intern Assessment**
 
-[![Live Demo](https://img.shields.io/badge/🚀%20Live%20Demo-Streamlit%20App-7C3AED?style=for-the-badge)](LIVE_DEMO_URL)
+[![Live Demo](https://img.shields.io/badge/🚀%20Live%20Demo-Streamlit%20App-7C3AED?style=for-the-badge)](https://cynbit-submission-reviewer.streamlit.app/)
 
 *Every submission, read in seconds. The decision stays human.*
 
